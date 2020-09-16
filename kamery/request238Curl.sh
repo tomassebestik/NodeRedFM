@@ -1,0 +1,2 @@
+curl --location --request PUT '10.3.2.238/ISAPI/PTZCtrl/channels/1/presets/202/goto' --header 'Authorization: Basic YWRtaW46MTk3OCpmbXY='
+curl --location --request PUT '10.3.2.238/ISAPI/PTZCtrl/channels/1/presets/202/goto' --header 'Authorization: Basic YWRtaW46MTk3OCpmbXY='
