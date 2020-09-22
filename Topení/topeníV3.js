@@ -1,18 +1,22 @@
 // setup HEATING TOWER
-const quidoBoard = "quidoV5Pripravna";
-const heatingLimitsHall = "limityTopeniPripravna";
-var sensorPrimaryStatus = global.get("senzorLANaudit.teplotaLANT");
-var sensorPrimaryTemperature = global.get("senzorLANaudit.teplotaLANT");
-var sensorBackupTemperature = global.get("senzoryPripravna.teplota4");
-
-var manualControl = global.get("heatManualPripravna");
-var UIswitch = global.get("pripControl_topeniV5");
-const ipAddressQuidoEnd = 204;
+const quidoBoard = "quidoV3Dynapac";
+const ipAddressQuidoEnd = 207;
 const quidoDrivenOutput = 1;
 const quidoOutputTime = 255;
+const heatingLimitsHall = "limityTopeniDynapac";
+
+const sensorPrimaryStatus = global.get("sensoryPripravna.stavS7");
+const sensorPrimaryTemperature = global.get("sensoryPripravna.teplota7");
+const sensorBackupTemperature = global.get("senzorLANTdynapac.teplotaLANT");
+
+var manualControl = global.get("heatManualDynapac");
+var UIswitch = global.get("dynaControl_topeniV3");
+
+
 
 ///////////////////////////////////
 ///// CODE:
+
 var heatingStartTemperature = global.get(`${heatingLimitsHall}.START`);
 var heatingStopTemperature = global.get(`${heatingLimitsHall}.STOP`);
 var planHallCalendar = global.get(`${heatingLimitsHall}.STAV`);

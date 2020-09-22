@@ -2,10 +2,10 @@
 const inputPrefix = "lis";
 const fontSize = 6;
 const allowedColor = "green";
-const allowedMessage = "povoleno";
+const allowedMessage = "směna";
 
 const forbidenColor = "grey";
-const forbidenMessage = "zakázáno";
+const forbidenMessage = "nepřítomnost";
 
 const location = "Lisovna";
 const limitsGlobalSetTo = "limityTopeniLisovna";
@@ -19,22 +19,49 @@ const forbidenHeatingUIGaugeColorChange = 12;
 ///// CODE:
 //
 
+var currentTime = msg.time;
 var allowedHeatingStart = global.get(`${inputPrefix}_topSTARTP`);
-var allowedHeatingStop  = global.get(`${inputPrefix}_topSTOPP`);
-var forbidenHeatingStart= global.get(`${inputPrefix}_topSTARTZ`);
+var allowedHeatingStop = global.get(`${inputPrefix}_topSTOPP`);
+var forbidenHeatingStart = global.get(`${inputPrefix}_topSTARTZ`);
 var forbidenHeatingStop = global.get(`${inputPrefix}_topSTOPZ`);
 
 // from node input stream
-var eventStart = msg.payload[0].eventStart;
-var eventEnd = msg.payload[0].eventEnd;
-var eventAllDay = msg.payload[0].allDay;
-var currentTime = msg.time;
+var activeEvent;
+var messageLenght = parseInt(msg.payload.length);
+
+// create list of all upcoming calendar events
+var events = [];
+
+function isTimeWindow(numberOfEvents) {
+  for (i = 0; i < numberOfEvents; i++) {
+    eventName = "event" + parseInt(i);
+    startEvent = msg.payload[i].eventStart;
+    endEvent = msg.payload[i].eventEnd;
+    allDayEvent = msg.payload[i].allDay;
+
+    if (
+      (currentTime >= startEvent && currentTime <= endEvent) ||
+      allDayEvent === true
+    ) {
+      events[i] = true;
+    } else {
+      events[i] = false;
+    }
+  }
+}
+
+// function calling
+isTimeWindow(messageLenght);
+
+// checks if any of upcomming event is true (in current time window)
+function checkState(state) {
+  return state === true;
+}
+
+activeEvent = events.some(checkState);
 
 // parse calendar event
-if (
-  (currentTime >= eventStart && currentTime <= eventEnd) ||
-  eventAllDay === true
-) {
+if (activeEvent === true) {
   statusShiftCurrent = 1;
   message = `<font color=${allowedColor}><font size = ${fontSize}>${allowedMessage}`;
   logMessage = allowedMessage;
@@ -54,7 +81,7 @@ heatingLimits.OPTIMUM = optimalWorkingTemperature;
 heatingLimits.LOKACE = location;
 
 if (statusShiftCurrent === 1) {
-  heatingLimits.STAV = "povoleno";
+  heatingLimits.STAV = true;
 
   heatingLimits.MAX = optimalWorkingTemperature + allowedHeatingUIGaugeLimits;
   heatingLimits.MIN = optimalWorkingTemperature - allowedHeatingUIGaugeLimits;
@@ -65,7 +92,7 @@ if (statusShiftCurrent === 1) {
   heatingLimits.START = allowedHeatingStart;
   heatingLimits.STOP = allowedHeatingStop;
 } else {
-  heatingLimits.STAV = "zakázáno";
+  heatingLimits.STAV = false;
   heatingLimits.MAX = optimalWorkingTemperature + forbidenHeatingUIGaugeLimits;
   heatingLimits.MIN = optimalWorkingTemperature - forbidenHeatingUIGaugeLimits;
   heatingLimits.SEG1 =

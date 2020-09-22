@@ -2,40 +2,68 @@
 const inputPrefix = "office";
 const fontSize = 6;
 const allowedColor = "green";
-const allowedMessage = "povoleno";
+const allowedMessage = "směna";
 
 const forbidenColor = "grey";
-const forbidenMessage = "zakázáno";
+const forbidenMessage = "nepřítomnost";
 
 const location = "Kanceláře";
 const limitsGlobalSetTo = "limityTopeniOffice";
 const optimalWorkingTemperature = 22; // graph center axis
 
 const allowedHeatingSetTemperature = 20;
-const allowedHeatingHysteresisStart = -1;
-const allowedHeatingHysteresisStop = +1;
+const allowedHeatingStart = 19;
+const allowedHeatingStop = 21;
 const allowedHeatingUIGaugeLimits = 8;
 const allowedHeatingUIGaugeColorChange = 2;
 
 const forbidenHeatingSetTemperature = 15;
-const forbidenHeatingHysteresisStart = -1;
-const forbidenHeatingHysteresisStop = +1;
+const forbidenHeatingStart = 14;
+const forbidenHeatingStop = 16;
 const forbidenHeatingUIGaugeLimits = 18;
 const forbidenHeatingUIGaugeColorChange = 7;
 
 ///////////////////////////////////
 ///// CODE:
 //
-var currentTime = msg.payload;
-var eventStart = global.get(`${inputPrefix}_eventStart`);
-var eventEnd = global.get(`${inputPrefix}_eventEnd`);
-var eventAllDay = global.get(`${inputPrefix}_eventAllDay`);
+var currentTime = msg.time;
+// from node input stream
+var activeEvent;
+var messageLenght = parseInt(msg.payload.length);
+
+// create list of all upcoming calendar events
+var events = [];
+
+function isTimeWindow(numberOfEvents) {
+  for (i = 0; i < numberOfEvents; i++) {
+    eventName = "event" + parseInt(i);
+    startEvent = msg.payload[i].eventStart;
+    endEvent = msg.payload[i].eventEnd;
+    allDayEvent = msg.payload[i].allDay;
+
+    if (
+      (currentTime >= startEvent && currentTime <= endEvent) ||
+      allDayEvent === true
+    ) {
+      events[i] = true;
+    } else {
+      events[i] = false;
+    }
+  }
+}
+
+// function calling
+isTimeWindow(messageLenght);
+
+// checks if any of upcomming event is true (in current time window)
+function checkState(state) {
+  return state === true;
+}
+
+activeEvent = events.some(checkState);
 
 // parse calendar event
-if (
-  (currentTime >= eventStart && currentTime <= eventEnd) ||
-  eventAllDay === true
-) {
+if (activeEvent === true) {
   statusShiftCurrent = 1;
   message = `<font color=${allowedColor}><font size = ${fontSize}>${allowedMessage}`;
   logMessage = allowedMessage;
@@ -55,51 +83,37 @@ heatingLimits.OPTIMUM = optimalWorkingTemperature;
 heatingLimits.LOKACE = location;
 
 if (statusShiftCurrent === 1) {
-  heatingLimits.STAV = "povoleno";
-  heatingLimits.SET = allowedHeatingSetTemperature;
+  heatingLimits.STAV = true;
+
   heatingLimits.MAX = optimalWorkingTemperature + allowedHeatingUIGaugeLimits;
   heatingLimits.MIN = optimalWorkingTemperature - allowedHeatingUIGaugeLimits;
   heatingLimits.SEG1 =
     optimalWorkingTemperature - allowedHeatingUIGaugeColorChange;
   heatingLimits.SEG2 =
     optimalWorkingTemperature + allowedHeatingUIGaugeColorChange;
-  heatingLimits.START =
-    allowedHeatingSetTemperature + allowedHeatingHysteresisStart;
-  heatingLimits.STOP =
-    allowedHeatingSetTemperature + allowedHeatingHysteresisStop;
+  heatingLimits.START = allowedHeatingStart;
+  heatingLimits.STOP = allowedHeatingStop;
 } else {
-  heatingLimits.STAV = "zakázáno";
-  heatingLimits.SET = forbidenHeatingSetTemperature;
+  heatingLimits.STAV = false;
   heatingLimits.MAX = optimalWorkingTemperature + forbidenHeatingUIGaugeLimits;
   heatingLimits.MIN = optimalWorkingTemperature - forbidenHeatingUIGaugeLimits;
   heatingLimits.SEG1 =
     optimalWorkingTemperature - forbidenHeatingUIGaugeColorChange;
   heatingLimits.SEG2 =
     optimalWorkingTemperature + forbidenHeatingUIGaugeColorChange;
-  heatingLimits.START =
-    forbidenHeatingSetTemperature + forbidenHeatingHysteresisStart;
-  heatingLimits.STOP =
-    forbidenHeatingSetTemperature + forbidenHeatingHysteresisStop;
+  heatingLimits.START = forbidenHeatingStart;
+  heatingLimits.STOP = forbidenHeatingStop;
 }
 
 // output
-var msg1 = {
-  payload: statusShiftCurrent,
-  topic: statusLabelText
-};
-
-var msg2 = {
-  payload: message
-};
-
-var msg3 = {
-  payload: logMessage,
-  highlight: popUpHighlight
-};
-
-var msg4 = {
-  payload: heatingLimits
-};
+var msg1 = { payload: statusShiftCurrent, topic: statusLabelText };
+var msg2 = { payload: message };
+var msg3 = { payload: logMessage, highlight: popUpHighlight };
+var msg4 = { payload: heatingLimits };
+var msg5 = { payload: allowedHeatingStart };
+var msg6 = { payload: allowedHeatingStop };
+var msg7 = { payload: forbidenHeatingStart };
+var msg8 = { payload: forbidenHeatingStop };
 
 global.set(limitsGlobalSetTo, heatingLimits);
-return [msg1, msg2, msg3, msg4];
+return [msg1, msg2, msg3, msg4, msg5, msg6, msg7, msg8];

@@ -1,5 +1,5 @@
 // setup
-const inputPrefix = "prip";
+const inputPrefix = "svar";
 const fontSize = 6;
 const allowedColor = "green";
 const allowedMessage = "směna";
@@ -7,9 +7,9 @@ const allowedMessage = "směna";
 const forbidenColor = "grey";
 const forbidenMessage = "nepřítomnost";
 
-const location = "Přípravna";
-const limitsGlobalSetTo = "limityTopeniPripravna";
-const optimalWorkingTemperature = 22; // graph center axis
+const location = "Svařovna";
+const limitsGlobalSetTo = "limityTopeniSvarovna";
+const optimalWorkingTemperature = 20; // graph center axis
 const allowedHeatingUIGaugeLimits = 8;
 const allowedHeatingUIGaugeColorChange = 4;
 const forbidenHeatingUIGaugeLimits = 18;

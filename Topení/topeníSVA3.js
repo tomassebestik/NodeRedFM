@@ -1,15 +1,18 @@
-// setup HEATING TOWER
-const quidoBoard = "quidoV5Pripravna";
-const heatingLimitsHall = "limityTopeniPripravna";
-var sensorPrimaryStatus = global.get("senzorLANaudit.teplotaLANT");
-var sensorPrimaryTemperature = global.get("senzorLANaudit.teplotaLANT");
-var sensorBackupTemperature = global.get("senzoryPripravna.teplota4");
+// setup HEATING COIL IN AIR-UNIT
+const heatingLimitsHall = "limityTopeniSvarovna";
+const quidoBoard = "quidoVYSTUPYSvarovna";
 
-var manualControl = global.get("heatManualPripravna");
-var UIswitch = global.get("pripControl_topeniV5");
-const ipAddressQuidoEnd = 204;
-const quidoDrivenOutput = 1;
+const ipAddressQuidoEnd = 231;
+const quidoDrivenOutput = 8;
 const quidoOutputTime = 255;
+
+var sensorPrimaryStatus = global.get("senzorySvarovna.stavS2");
+var sensorPrimaryTemperature = global.get("senzorySvarovna.teplota2");
+var sensorBackupTemperature = global.get("senzorySvarovna.teplota10");
+var manualControl = global.get("heatManualSvarovna");
+
+var UIswitch = global.get("svarControl_topeni3");
+var mainBranchSwitch = global.get("svarControl_privod3");
 
 ///////////////////////////////////
 ///// CODE:
@@ -37,7 +40,10 @@ if (planHallCalendar === true && heatingPeriod === true) {
 }
 
 // thermostat current status
-if ((currentTemperature <= heatingStartTemperature) && heatingHallAllowed === true) {
+if (
+  currentTemperature <= heatingStartTemperature &&
+  heatingHallAllowed === true
+) {
   thermostat = true;
 } else if (currentTemperature >= heatingStopTemperature) {
   thermostat = false;
@@ -47,15 +53,14 @@ if ((currentTemperature <= heatingStartTemperature) && heatingHallAllowed === tr
 var commandOnPulse = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=s&id=${quidoDrivenOutput}&time=${quidoOutputTime}`;
 var commandOff = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=r&id=${quidoDrivenOutput}`;
 
-
 // control logic
 var command;
 var drive;
 
-
-
-//manual control
-if (manualControl === true && UIswitch === false) {
+if (mainBranchSwitch === false) {
+  command = commandOff;
+  drive = false;
+} else if (manualControl === true && UIswitch === false) {
   command = commandOff;
   drive = false;
 } else if (manualControl === true && UIswitch === true) {
@@ -91,10 +96,12 @@ if (manualControl === true && UIswitch === false) {
   drive = true;
 
   //manual
-}
-
-// no command, only switch
-else if (manualControl === false && thermostat === "mezi" && outputRelay === 0) {
+} else if (
+  manualControl === false &&
+  thermostat === "mezi" &&
+  outputRelay === 0
+) {
+  // no command, only switch
   command = null;
   drive = false;
 } else if (

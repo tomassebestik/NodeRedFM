@@ -1,18 +1,21 @@
 // setup HEATING TOWER
-const quidoBoard = "quidoV5Pripravna";
-const heatingLimitsHall = "limityTopeniPripravna";
-var sensorPrimaryStatus = global.get("senzorLANaudit.teplotaLANT");
-var sensorPrimaryTemperature = global.get("senzorLANaudit.teplotaLANT");
-var sensorBackupTemperature = global.get("senzoryPripravna.teplota4");
+const quidoBoard = "quidoKombibox";
+const heatingLimitsHall = "limityTopeniKombibox";
+const energyTrigger = 2;
 
-var manualControl = global.get("heatManualPripravna");
-var UIswitch = global.get("pripControl_topeniV5");
-const ipAddressQuidoEnd = 204;
+var sensorPrimaryStatus = global.get("sensoryPripravna.stavS8");
+var sensorPrimaryTemperature = global.get("sensoryPripravna.teplota8");
+var sensorBackupTemperature = global.get("quidoKombibox.teplotaQuido");
+
+var manualControl = global.get("heatManualKombibox");
+var UIswitch = global.get("kboxControl_topeniP1");
+const ipAddressQuidoEnd = 222;
 const quidoDrivenOutput = 1;
-const quidoOutputTime = 255;
+const quidoOutputTime = 255; //pulse lenght
 
 ///////////////////////////////////
 ///// CODE:
+var energyLoadTrigger = global.get(`dataEMAX.stopZatez${energyTrigger}`);
 var heatingStartTemperature = global.get(`${heatingLimitsHall}.START`);
 var heatingStopTemperature = global.get(`${heatingLimitsHall}.STOP`);
 var planHallCalendar = global.get(`${heatingLimitsHall}.STAV`);
@@ -37,7 +40,10 @@ if (planHallCalendar === true && heatingPeriod === true) {
 }
 
 // thermostat current status
-if ((currentTemperature <= heatingStartTemperature) && heatingHallAllowed === true) {
+if (
+  currentTemperature <= heatingStartTemperature &&
+  heatingHallAllowed === true
+) {
   thermostat = true;
 } else if (currentTemperature >= heatingStopTemperature) {
   thermostat = false;
@@ -47,15 +53,15 @@ if ((currentTemperature <= heatingStartTemperature) && heatingHallAllowed === tr
 var commandOnPulse = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=s&id=${quidoDrivenOutput}&time=${quidoOutputTime}`;
 var commandOff = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=r&id=${quidoDrivenOutput}`;
 
-
 // control logic
 var command;
 var drive;
 
-
-
-//manual control
-if (manualControl === true && UIswitch === false) {
+if (energyLoadTrigger === 1) {
+  command = commandOff;
+  drive = false;
+  //manual control
+} else if (manualControl === true && UIswitch === false) {
   command = commandOff;
   drive = false;
 } else if (manualControl === true && UIswitch === true) {
@@ -91,10 +97,12 @@ if (manualControl === true && UIswitch === false) {
   drive = true;
 
   //manual
-}
-
-// no command, only switch
-else if (manualControl === false && thermostat === "mezi" && outputRelay === 0) {
+} else if (
+  manualControl === false &&
+  thermostat === "mezi" &&
+  outputRelay === 0
+) {
+  // no command, only switch
   command = null;
   drive = false;
 } else if (

@@ -1,15 +1,17 @@
 // setup HEATING TOWER
-const quidoBoard = "quidoV5Pripravna";
-const heatingLimitsHall = "limityTopeniPripravna";
-var sensorPrimaryStatus = global.get("senzorLANaudit.teplotaLANT");
-var sensorPrimaryTemperature = global.get("senzorLANaudit.teplotaLANT");
-var sensorBackupTemperature = global.get("senzoryPripravna.teplota4");
+const quidoBoard = "quidoV4Lisovna";
+const heatingLimitsHall = "limityTopeniLisovna";
+var sensorPrimaryStatus = global.get("senzoryLisovna.stavS4");
+var sensorPrimaryTemperature = global.get("senzoryLisovna.teplota4");
+var sensorBackupTemperature = global.get("senzoryLisovna.teplota5");
 
-var manualControl = global.get("heatManualPripravna");
-var UIswitch = global.get("pripControl_topeniV5");
-const ipAddressQuidoEnd = 204;
+var manualControl = global.get("heatManualLisovna");
+var UIswitch = global.get("lisoControl_topeniV4");
+const ipAddressQuidoEnd = 190;
 const quidoDrivenOutput = 1;
 const quidoOutputTime = 255;
+
+
 
 ///////////////////////////////////
 ///// CODE:

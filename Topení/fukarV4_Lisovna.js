@@ -1,17 +1,17 @@
 // setup AIR BLOWER
 // const quidoBoard = "";
-const heatingLimitsHall = "limityTopeniLisovna";
 const energyTrigger = 1;
+const heatingLimitsHall = "limityTopeniLisovna";
+var sensorPrimaryTemperature = global.get("senzoryLisovna.teplota7");
+var sensorBackupTemperature = global.get("senzoryLisovna.teplota3");
 
-var sensorPrimaryTemperature = global.get("senzoryLisovna.teplota6");
-var sensorBackupTemperature = global.get("senzoryLisovna.teplota2");
-
+var energyLoadTrigger = global.get("dataEMAX.stopZatez1");
 var manualControl = global.get("heatManualLisovna");
-var UIswitch = global.get("lisoControl_topeniFUV2");
+var UIswitch = global.get("lisoControl_topeniFUV4");
 
 const tempDifferenceTrigger = 3; // difference between sensors in °C
 const ipAddressQuidoEnd = 216;
-const quidoDrivenOutput = 2;
+const quidoDrivenOutput = 1;
 const quidoOutputTime = 255;
 
 ///////////////////////////////////
@@ -25,9 +25,9 @@ var temperatureDiferrence;
 if (
   sensorPrimaryTemperature !== undefined &&
   sensorBackupTemperature !== undefined
-  ) {
-    temperatureDiferrence = sensorPrimaryTemperature - sensorBackupTemperature;
-  }
+) {
+  temperatureDiferrence = sensorPrimaryTemperature - sensorBackupTemperature;
+}
 
 // thermostat logic
 var thermostat;
@@ -35,6 +35,9 @@ if (temperatureDiferrence >= tempDifferenceTrigger) {
   thermostat = true;
 } else thermostat = false;
 
+// driving API commands constructor
+var commandOn = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=s&id=${quidoDrivenOutput}&time=${quidoOutputTime}`;
+var commandOff = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=r&id=${quidoDrivenOutput}`;
 
 // active heating allowed logic
 var heatingHallAllowed;
@@ -44,10 +47,6 @@ if (planHallCalendar === true && heatingPeriod === true) {
 } else {
   heatingHallAllowed = false;
 }
-
-// driving API commands constructor
-var commandOn = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=s&id=${quidoDrivenOutput}&time=${quidoOutputTime}`;
-var commandOff = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=r&id=${quidoDrivenOutput}`;
 
 // control logic
 var command;

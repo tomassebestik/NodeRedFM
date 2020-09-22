@@ -1,5 +1,5 @@
 // setup
-const inputPrefix = "prip";
+const inputPrefix = "kbox";
 const fontSize = 6;
 const allowedColor = "green";
 const allowedMessage = "směna";
@@ -7,8 +7,8 @@ const allowedMessage = "směna";
 const forbidenColor = "grey";
 const forbidenMessage = "nepřítomnost";
 
-const location = "Přípravna";
-const limitsGlobalSetTo = "limityTopeniPripravna";
+const location = "Kombibox";
+const limitsGlobalSetTo = "limityTopeniKombibox";
 const optimalWorkingTemperature = 22; // graph center axis
 const allowedHeatingUIGaugeLimits = 8;
 const allowedHeatingUIGaugeColorChange = 4;
