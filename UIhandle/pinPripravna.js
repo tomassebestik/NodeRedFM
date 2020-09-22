@@ -1,7 +1,7 @@
 // setup
 const manualControlPinTo = "heatManualPripravna";
-const hallPin = "3333";
-const masterPin = "2638";
+const hallPin = "*****";
+const masterPin = "*****";
 
 ///////////////////////////////////
 ///// CODE:
