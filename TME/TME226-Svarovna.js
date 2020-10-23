@@ -1,28 +1,24 @@
 // setup TME base
-const outputGlobalSetTo = "senzoryLisovna";
-const sensorsActive = 7; // number of active sensors
+const outputGlobalSetTo = "senzorySvarovna";
+const sensorsActive = 10; // number of active sensors
 const roundTempDecimals = 0; //how many decimals for round temperature
 
 let sensorLabels = {
-  topic1: "sklad plechů",
-  topic2: "Brünhuber",
-  topic3: "střed haly",
-  topic4: "Schuller 1000",
-  topic5: "Schuller 630",
-  topic6: "srážeč strop V2",
-  topic7: "srážeč strop V4",
-  IP: "10.3.2.188",
-  location: "Hala: LISOVNA"
+  topic1: "broušení",
+  topic2: "robot C60-2",
+  topic3: "BOX 23 Komatsu",
+  topic4: "BOX 41 Kubota",
+  topic5: "kanban svařovny",
+  topic6: "podesta přívod 1",
+  topic7: "podesta přívod 2",
+  topic8: "podesta přívod 3",
+  topic9: "podesta přívod 4",
+  topic10: "robot C60/CC4",
+  IP: "10.3.2.226",
+  location: "Hala: SVAŘOVNA"
 };
 
 
-var temp1  = global.get("senzorySvarovna.teplota1");
-var temp2  = global.get("senzorySvarovna.teplota2");
-var temp3  = global.get("senzorySvarovna.teplota3");
-var temp4  = global.get("senzorySvarovna.teplota4");
-var temp5  = global.get("senzorySvarovna.teplota5");
-var temp6  = global.get("sensoryPripravna.teplota6");
-var temp7  = global.get("senzorySvarovna.teplota10");
 
 
 ///////////////////////////////////
@@ -106,20 +102,6 @@ function createLabels() {
   }
 }
 
-// parse sensor humidity value (RH 0-100%)
-function parseSensorHumidity(sensorID) {
-  sensorName = "vlhkost" + (parseInt(sensorID) + 1);
-  sensorValue = msg.payload.root.sns[sensorID].$.v2 / 10;
-  sensors[sensorName] = parseFloat(sensorValue.toFixed(roundTempDecimals)); 
-}
-
-// parse sensor humidity value (RH 0-100%)
-function parseSensorDewPoint(sensorID) {
-  sensorName = "rosnyBod" + (parseInt(sensorID) + 1);
-  sensorValue = msg.payload.root.sns[sensorID].$.v3 / 10;
-  sensors[sensorName] = parseFloat(sensorValue.toFixed(roundTempDecimals)); 
-}
-
 
 
 // functions calling
@@ -130,8 +112,7 @@ parseSensorBattery(sensorsActive);
 parseSensorBatteryUI(sensorsActive);
 parseSensorSignal(sensorsActive);
 parseSensorSignalUI(sensorsActive);
-parseSensorHumidity(0) // only first sensor (0:) has humidity function
-parseSensorDewPoint(0) // only first sensor (0:) has humidity function
+
 createLabels();
 
 // output

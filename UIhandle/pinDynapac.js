@@ -1,7 +1,7 @@
 // setup
-const manualControlPinTo = "heatManualPripravna";
+const manualControlPinTo = "heatManualDynapac";
 
-const hallPin = global.get("security.pripravna");
+const hallPin = global.get("security.dynapac");
 const masterPin = global.get("security.master");
 
 ///////////////////////////////////

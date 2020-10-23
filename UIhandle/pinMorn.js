@@ -1,7 +1,7 @@
 // setup
-const manualControlPinTo = "heatManualPripravna";
+const manualControlPinTo = "heatManualMorn";
 
-const hallPin = global.get("security.pripravna");
+const hallPin = global.get("security.morn");
 const masterPin = global.get("security.master");
 
 ///////////////////////////////////

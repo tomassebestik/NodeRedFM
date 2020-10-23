@@ -1,8 +1,12 @@
 // setup
-const manualControlPinTo = "heatManualPripravna";
+const manualControlPinTo = "heatManualKombibox";
 
-const hallPin = global.get("security.pripravna");
+const hallPin = global.get("security.kombibox");
 const masterPin = global.get("security.master");
+
+
+
+
 
 ///////////////////////////////////
 ///// CODE:
