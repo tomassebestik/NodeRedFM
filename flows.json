@@ -4349,195 +4349,6 @@
         "height": 1
     },
     {
-        "id": "7b714471.0f7e3c",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 1,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "68be7609.a25bb",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 5,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "e27c968d.d2f8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 6,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "735063dc.84747c",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 7,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "c8065fa3.eec228",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 8,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "879a138c.65872",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 9,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "10770e3e.8dbcea",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 10,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "c2d9fe7b.5e61d",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "46a860b.77e622",
-        "order": 11,
-        "width": 3,
-        "height": 1
-    },
-    {
-        "id": "d43d116.42ea77",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "ad17cd3b.9510f8",
-        "order": 1,
-        "width": 2,
-        "height": 1
-    },
-    {
-        "id": "eb77550.bf004a8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 1,
-        "width": 16,
-        "height": 1
-    },
-    {
-        "id": "955f9bd8.783bb",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 5,
-        "width": 15,
-        "height": 1
-    },
-    {
-        "id": "ad30245b.fb478",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 8,
-        "width": 15,
-        "height": 1
-    },
-    {
-        "id": "56d4dcb.127eb24",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 10,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "892647f3.775ef8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 11,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "6005a632.f307c",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 14,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "a08bad1a.eff14",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 15,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "286a0df0.c47322",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 17,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "e08d095.5d1ebf8",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 19,
-        "width": 4,
-        "height": 1
-    },
-    {
-        "id": "cbd89e4b.21f298",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "f476cbf6.92bea8",
-        "order": 21,
-        "width": 6,
-        "height": 1
-    },
-    {
-        "id": "f7fe6b40.434808",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "2aa5b53d.207b82",
-        "order": 2,
-        "width": 9,
-        "height": 1
-    },
-    {
-        "id": "b7720eb.445d5f",
-        "type": "ui_spacer",
-        "name": "spacer",
-        "group": "408c9534.110b74",
-        "order": 2,
-        "width": 10,
-        "height": 1
-    },
-    {
         "id": "73f4132a.10700c",
         "type": "ui_spacer",
         "name": "spacer",
@@ -6341,6 +6152,222 @@
         "group": "bd2e2ba1.c8d9a8",
         "order": 3,
         "width": 11,
+        "height": 1
+    },
+    {
+        "id": "1605f1b4.0142ee",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 1,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "60786a75.14d1b4",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "f59ef991.f5129",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 6,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "7ea3a888.74402",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "d151dedb.60ad38",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "914c2a9d.bbc6d8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "7589efd8.c28ca8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "2f103a32.d38abe",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "46a860b.77e622",
+        "order": 11,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "2e25c48d.64af9c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "ad17cd3b.9510f8",
+        "order": 1,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "25bfe962.9d537e",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "ad17cd3b.9510f8",
+        "order": 4,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "b251a5ae.e426e",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 1,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "7a750f4b.7cb6d",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 5,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "ee37544b.947d1",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 8,
+        "width": 15,
+        "height": 1
+    },
+    {
+        "id": "2d84f9cd.9507de",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 10,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "698f188.6122c68",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 11,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "f0338bef.eb523",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 14,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "45c71406.a5256c",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 15,
+        "width": 9,
+        "height": 1
+    },
+    {
+        "id": "4d4fb16f.4f83c8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 17,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "24b97a7.f8ebb06",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 19,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "ecd38ee8.b54c28",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "f476cbf6.92bea8",
+        "order": 21,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "edc9ee59.84a928",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "2aa5b53d.207b82",
+        "order": 2,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "636daee8.9dcee8",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "2aa5b53d.207b82",
+        "order": 3,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "24e6bd7d.eadc3a",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "408c9534.110b74",
+        "order": 2,
+        "width": 10,
+        "height": 1
+    },
+    {
+        "id": "37659cf1.698d54",
+        "type": "ui_spacer",
+        "name": "spacer",
+        "group": "408c9534.110b74",
+        "order": 3,
+        "width": 10,
         "height": 1
     },
     {
@@ -34952,7 +34979,7 @@
                 "e408e54b.1e2f5"
             ],
             [
-                "28f030cb.f7d5c"
+                "c6e579e9.9a7fd8"
             ]
         ]
     },
@@ -35449,7 +35476,7 @@
                 "bcb8758e.155b4"
             ],
             [
-                "fe9c0bd2.bee8a"
+                "74a58e51.81e39"
             ]
         ]
     },
@@ -36355,7 +36382,7 @@
                 "c37938aa.2a35e8"
             ],
             [
-                "92dcf28b.f11e4"
+                "8b84b9e7.30123"
             ]
         ]
     },
@@ -36708,7 +36735,7 @@
                 "31639eb9.737082"
             ],
             [
-                "a3c1c16e.1a5fa8"
+                "bd6f879f.d34db8"
             ]
         ]
     },
@@ -39020,7 +39047,7 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 810,
+        "x": 950,
         "y": 3440,
         "wires": [
             [
@@ -39044,7 +39071,7 @@
                 "ef58afc1.f4836"
             ],
             [
-                "132245b3.8b0b52"
+                "294fb90d.951f36"
             ]
         ]
     },
@@ -39059,7 +39086,7 @@
             "3ef36da5.c58ef2",
             "ea1ad79b.a13c5"
         ],
-        "x": 1395,
+        "x": 1535,
         "y": 3440,
         "wires": [],
         "icon": "font-awesome/fa-paper-plane-o"
@@ -39319,7 +39346,7 @@
                 "type": "str"
             }
         ],
-        "x": 1090,
+        "x": 1230,
         "y": 3440,
         "wires": [
             [
@@ -39356,47 +39383,6 @@
             [
                 "6781d905.78339"
             ]
-        ]
-    },
-    {
-        "id": "47466f2d.8849f8",
-        "type": "inject",
-        "z": "34835a84.76574e",
-        "name": "5s",
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "repeat": "5",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "x": 190,
-        "y": 3840,
-        "wires": [
-            [
-                "bf9077ef.82bc48"
-            ]
-        ]
-    },
-    {
-        "id": "bf9077ef.82bc48",
-        "type": "function",
-        "z": "34835a84.76574e",
-        "name": "stav vrata Dynapac",
-        "func": "/// STATUS - vrata Dynapac\n// na vstup node opakovací puls\n\nvar vstup = global.get(\"quidoV3Dynapac.Quido_I2\");\n//var vstup = global.get(\"quidoTESTTEST\");\n\nvar message;\nvar background;\nvar invert;\n\nif (vstup === 0) {\n    message = \"otevřená  \";\n    background = \"red\";\n    invert = 1;\n}\n\n//\nelse if (vstup === 1) {\n    message = \"zavřená\";\n    background = \"green\";\n    invert = 0;\n}\n\n//\nelse {\n    return null;\n}\n\n\n//// výstupy\nvar msg1 = {\n    payload: message,\n    background: background,\n    };\n\nvar msg2 = {\n    payload: invert\n};\n\nreturn [msg1, msg2];",
-        "outputs": 2,
-        "noerr": 0,
-        "x": 560,
-        "y": 3840,
-        "wires": [
-            [],
-            [
-                "fefdac5e.b01a38"
-            ]
-        ],
-        "outputLabels": [
-            "",
-            "invert"
         ]
     },
     {
@@ -39573,45 +39559,6 @@
             [
                 "133c308c.da54d7"
             ]
-        ]
-    },
-    {
-        "id": "23bc1e6a.787342",
-        "type": "subflow:f0aa1a34.bf071",
-        "z": "34835a84.76574e",
-        "name": "quidoV3Dynapac.Quido_I2",
-        "env": [
-            {
-                "name": "API_SENZOR",
-                "value": "quidoV3Dynapac.Quido_I2",
-                "type": "str"
-            },
-            {
-                "name": "API_TOPIC",
-                "value": "vrata",
-                "type": "str"
-            }
-        ],
-        "x": 570,
-        "y": 3940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "fefdac5e.b01a38",
-        "type": "rbe",
-        "z": "34835a84.76574e",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 850,
-        "y": 3760,
-        "wires": [
-            []
         ]
     },
     {
@@ -40287,20 +40234,6 @@
         ]
     },
     {
-        "id": "7d762ab0.cad614",
-        "type": "function",
-        "z": "34835a84.76574e",
-        "name": "počítadlo jen otevřená",
-        "func": "var state = msg.payload;\n\nif (state === 0) {\n    msg.payload = \"\";\n}\n\nelse {\n    msg.payload = state + \"s\";\n}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 980,
-        "y": 3840,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "85bb0df8.3c158",
         "type": "switch",
         "z": "8861277.f22d258",
@@ -40345,22 +40278,6 @@
                 "30833c89.9ff12c"
             ]
         ]
-    },
-    {
-        "id": "de91e726.9efcc8",
-        "type": "ui_text",
-        "z": "34835a84.76574e",
-        "group": "ad17cd3b.9510f8",
-        "order": 4,
-        "width": 2,
-        "height": 1,
-        "name": "labelV3",
-        "label": "",
-        "format": "<font size = 5>{{msg.payload}}",
-        "layout": "row-center",
-        "x": 1200,
-        "y": 3840,
-        "wires": []
     },
     {
         "id": "3ae783f1.4b7d94",
@@ -40543,25 +40460,6 @@
         ]
     },
     {
-        "id": "b2d3e42d.52b9e8",
-        "type": "http request",
-        "z": "34835a84.76574e",
-        "name": "Quido 10.3.2.207",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": false,
-        "url": "",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 1790,
-        "y": 3880,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "cfcd6cc5.5562f",
         "type": "debug",
         "z": "34835a84.76574e",
@@ -40575,130 +40473,6 @@
         "x": 1150,
         "y": 4220,
         "wires": []
-    },
-    {
-        "id": "18788db0.bcc4aa",
-        "type": "function",
-        "z": "34835a84.76574e",
-        "name": "ovládání vrat",
-        "func": "var state = msg.payload;\n//var calen = global.get(\"limityTopeniDynapac.STAV\");\n\n// pohyb vrat = 17 sekund\n// SETclose = zavřít po x vteřin otevřeno při opuštěné hale\nvar SETclose = 120;\n\n// následné pulsy\nvar pulse1 = SETclose;\nvar pulse2 = SETclose + 60;\nvar pulse3 = SETclose + 120;\n\nvar message;\nvar delay;\n\n/*\nvar cont_majak = \"http://10.3.2.207/set.xml?type=s&id=3&time=60\";\nvar cont_puls = \"http://10.3.2.207/set.xml?type=p&id=2\";\n*/\n\n\nif (state === pulse1) {\n    logovat = \"otevřeno déle než 2 minuty\";\n    majak = null;\n    puls = null;\n    \n}\n\n/*\nelse if (state === pulse1 && calen === \"zakázáno\") {\n    logovat = \"automaticky zavřít\";\n    majak = cont_majak;\n    puls = cont_puls;\n    \n}\n\nelse if (state === pulse2 && calen === \"zakázáno\") {\n    logovat = \"automaticky zavřít (2. pokus)\";\n    majak = cont_majak;\n    puls = cont_puls;\n}\n\nelse if (state === pulse3 && calen === \"zakázáno\") {\n    logovat = \"automaticky zavřít (3. pokus)\";\n    majak = cont_majak;\n    puls = cont_puls;\n}\n*/\n\n\nelse {\n    logovat = null;\n    majak = null;\n    puls = null;\n}\n\n\nvar msg1 = { payload:logovat,url:majak,delay:0};\nvar msg2 = { payload: 0, url:puls,delay:7000};\n\nreturn [ [ msg1, msg2 ]];",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 950,
-        "y": 3880,
-        "wires": [
-            [
-                "16b78f54.276cc9"
-            ]
-        ]
-    },
-    {
-        "id": "b22262f1.5e6d8",
-        "type": "debug",
-        "z": "34835a84.76574e",
-        "name": "quido",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1730,
-        "y": 3840,
-        "wires": []
-    },
-    {
-        "id": "42fa0fce.77a988",
-        "type": "delay",
-        "z": "34835a84.76574e",
-        "name": "",
-        "pauseType": "delayv",
-        "timeout": "0",
-        "timeoutUnits": "seconds",
-        "rate": "1",
-        "nbRateUnits": "1",
-        "rateUnits": "second",
-        "randomFirst": "1",
-        "randomLast": "5",
-        "randomUnits": "seconds",
-        "drop": false,
-        "x": 1360,
-        "y": 3880,
-        "wires": [
-            [
-                "81d30707.d51e9"
-            ]
-        ]
-    },
-    {
-        "id": "16b78f54.276cc9",
-        "type": "switch",
-        "z": "34835a84.76574e",
-        "name": "neprázdné",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nnull"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1170,
-        "y": 3880,
-        "wires": [
-            [
-                "42fa0fce.77a988",
-                "bc399e4c.add5d"
-            ]
-        ]
-    },
-    {
-        "id": "bc399e4c.add5d",
-        "type": "switch",
-        "z": "34835a84.76574e",
-        "name": "jen logovatelné",
-        "property": "payload",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "0",
-                "vt": "num"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1380,
-        "y": 3940,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "81d30707.d51e9",
-        "type": "switch",
-        "z": "34835a84.76574e",
-        "name": "no emtpy URL",
-        "property": "url",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "nempty"
-            }
-        ],
-        "checkall": "true",
-        "repair": false,
-        "outputs": 1,
-        "x": 1540,
-        "y": 3880,
-        "wires": [
-            [
-                "b22262f1.5e6d8"
-            ]
-        ]
     },
     {
         "id": "9a403a74.52cbf8",
@@ -42507,7 +42281,7 @@
                 "58d1abc8.b0d46c"
             ],
             [
-                "6264753a.717524"
+                "29aa3cd5.c17c24"
             ]
         ]
     },
@@ -42954,7 +42728,7 @@
                 "13b32ddc.d27e22"
             ],
             [
-                "f38ac4ba.d27f7"
+                "d71e45c0.d3b398"
             ]
         ]
     },
@@ -43230,7 +43004,7 @@
                 "6efb9915.57539"
             ],
             [
-                "9d268cc6.9a451"
+                "36af1743.e8a6c"
             ]
         ]
     },
@@ -43506,7 +43280,7 @@
                 "440c8491.f742a4"
             ],
             [
-                "3e67eae0.42a286"
+                "7e314647.abdfc8"
             ]
         ]
     },
@@ -43751,7 +43525,7 @@
                 "f9b9ab1.1eefcd8"
             ],
             [
-                "31bc2d9f.5ff1c2"
+                "a4d9b478.5ccf4"
             ]
         ]
     },
@@ -55492,7 +55266,7 @@
         "group": "408c9534.110b74",
         "order": 1,
         "width": 10,
-        "height": "2",
+        "height": 2,
         "label": "",
         "chartType": "horizontalBar",
         "legend": "false",
@@ -55533,8 +55307,8 @@
         "name": "bar graf signal",
         "group": "2aa5b53d.207b82",
         "order": 1,
-        "width": "10",
-        "height": "2",
+        "width": 10,
+        "height": 2,
         "label": "",
         "chartType": "horizontalBar",
         "legend": "false",
@@ -69577,6 +69351,166 @@
         "wires": [
             [
                 "b38821f0.10a16"
+            ]
+        ]
+    },
+    {
+        "id": "29aa3cd5.c17c24",
+        "type": "function",
+        "z": "8ee783a8.36f248",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 3460,
+        "wires": [
+            [
+                "6264753a.717524"
+            ]
+        ]
+    },
+    {
+        "id": "d71e45c0.d3b398",
+        "type": "function",
+        "z": "8ee783a8.36f248",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 3840,
+        "wires": [
+            [
+                "f38ac4ba.d27f7"
+            ]
+        ]
+    },
+    {
+        "id": "36af1743.e8a6c",
+        "type": "function",
+        "z": "8ee783a8.36f248",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 4200,
+        "wires": [
+            [
+                "9d268cc6.9a451"
+            ]
+        ]
+    },
+    {
+        "id": "7e314647.abdfc8",
+        "type": "function",
+        "z": "8ee783a8.36f248",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 940,
+        "y": 4520,
+        "wires": [
+            [
+                "3e67eae0.42a286"
+            ]
+        ]
+    },
+    {
+        "id": "a4d9b478.5ccf4",
+        "type": "function",
+        "z": "8ee783a8.36f248",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 4860,
+        "wires": [
+            [
+                "31bc2d9f.5ff1c2"
+            ]
+        ]
+    },
+    {
+        "id": "c6e579e9.9a7fd8",
+        "type": "function",
+        "z": "edfd2c89.b2926",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 760,
+        "y": 3420,
+        "wires": [
+            [
+                "28f030cb.f7d5c"
+            ]
+        ]
+    },
+    {
+        "id": "74a58e51.81e39",
+        "type": "function",
+        "z": "edfd2c89.b2926",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 3800,
+        "wires": [
+            [
+                "fe9c0bd2.bee8a"
+            ]
+        ]
+    },
+    {
+        "id": "8b84b9e7.30123",
+        "type": "function",
+        "z": "8861277.f22d258",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 760,
+        "y": 3920,
+        "wires": [
+            [
+                "92dcf28b.f11e4"
+            ]
+        ]
+    },
+    {
+        "id": "bd6f879f.d34db8",
+        "type": "function",
+        "z": "8861277.f22d258",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 780,
+        "y": 4180,
+        "wires": [
+            [
+                "a3c1c16e.1a5fa8"
+            ]
+        ]
+    },
+    {
+        "id": "294fb90d.951f36",
+        "type": "function",
+        "z": "34835a84.76574e",
+        "name": "errorFilter",
+        "func": "// 4 seconds input click\nvar inputMsg = msg.payload;\nvar counter = context.get(\"counter\") || 0;\nvar inError = context.get(\"chyba\") || false;\nvar repairMessage;\n\nconst errorCounterLimit = 30;\n\n// counter\nif (inputMsg === \"chyba\") {\n  counter += 1;\n} else {\n  counter = 0;\n}\n\ncontext.set(\"counter\", counter);\n\n// logic\nif (inputMsg === \"chyba\" && inError === false && counter >= errorCounterLimit) {\n  outputMessage = \"chyba\";\n  repairMessage = null;\n  context.set(\"chyba\", true);\n} else if (inputMsg !== \"chyba\" && inError === true) {\n  outputMessage = inputMsg;\n  repairMessage = \"OK\";\n  context.set(\"chyba\", false);\n} else if (inputMsg !== \"chyba\" && inError === false) {\n  outputMessage = inputMsg;\n} else outputMessage = \"\";\n\n// output\nmsg.payload = outputMessage;\nmsg.repair = repairMessage;\nmsg.error = inError;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 820,
+        "y": 3440,
+        "wires": [
+            [
+                "132245b3.8b0b52"
             ]
         ]
     }
