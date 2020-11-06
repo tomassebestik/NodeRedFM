@@ -10,6 +10,7 @@ const forbidenMessage = "nepřítomnost";
 const location = "Svařovna";
 const limitsGlobalSetTo = "limityTopeniSvarovna";
 const optimalWorkingTemperature = 20; // graph center axis
+const optimalEmptyTemperature = 12; // graph center axis
 const allowedHeatingUIGaugeLimits = 8;
 const allowedHeatingUIGaugeColorChange = 4;
 const forbidenHeatingUIGaugeLimits = 18;
@@ -77,24 +78,25 @@ if (activeEvent === true) {
 
 // kontejner
 let heatingLimits = {};
-heatingLimits.OPTIMUM = optimalWorkingTemperature;
 heatingLimits.LOKACE = location;
 
 if (statusShiftCurrent === 1) {
+  heatingLimits.OPTIMUM = optimalWorkingTemperature;
   heatingLimits.STAV = true;
-
+  
   heatingLimits.MAX = optimalWorkingTemperature + allowedHeatingUIGaugeLimits;
   heatingLimits.MIN = optimalWorkingTemperature - allowedHeatingUIGaugeLimits;
   heatingLimits.SEG1 =
-    optimalWorkingTemperature - allowedHeatingUIGaugeColorChange;
+  optimalWorkingTemperature - allowedHeatingUIGaugeColorChange;
   heatingLimits.SEG2 =
     optimalWorkingTemperature + allowedHeatingUIGaugeColorChange;
-  heatingLimits.START = allowedHeatingStart;
-  heatingLimits.STOP = allowedHeatingStop;
-} else {
-  heatingLimits.STAV = false;
-  heatingLimits.MAX = optimalWorkingTemperature + forbidenHeatingUIGaugeLimits;
-  heatingLimits.MIN = optimalWorkingTemperature - forbidenHeatingUIGaugeLimits;
+    heatingLimits.START = allowedHeatingStart;
+    heatingLimits.STOP = allowedHeatingStop;
+  } else {
+    heatingLimits.OPTIMUM = optimalEmptyTemperature;
+    heatingLimits.STAV = false;
+    heatingLimits.MAX = optimalWorkingTemperature + forbidenHeatingUIGaugeLimits;
+    heatingLimits.MIN = optimalWorkingTemperature - forbidenHeatingUIGaugeLimits;
   heatingLimits.SEG1 =
     optimalWorkingTemperature - forbidenHeatingUIGaugeColorChange;
   heatingLimits.SEG2 =
