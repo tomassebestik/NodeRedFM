@@ -16,7 +16,7 @@ const quidoOutputTime = 255;
 ///// CODE:
 var heatingStartTemperature = global.get(`${heatingLimitsHall}.START`);
 var heatingStopTemperature = global.get(`${heatingLimitsHall}.STOP`);
-var planHallCalendar = global.get(`${heatingLimitsHall}.STAV`);
+// var planHallCalendar = global.get(`${heatingLimitsHall}.STAV`);
 var heatingPeriod = global.get(`topnaSezona`);
 var outputRelay = global.get(`${quidoBoard}.Quido_O${quidoDrivenOutput}`);
 var currentTemperature;
@@ -29,16 +29,16 @@ if (sensorPrimaryStatus !== 4) {
   currentTemperature = sensorBackupTemperature;
 }
 
-// active heating allowed logic
-var heatingHallAllowed;
-if (planHallCalendar === true && heatingPeriod === true) {
-  heatingHallAllowed = true;
-} else {
-  heatingHallAllowed = false;
-}
+// // active heating allowed logic
+// var heatingHallAllowed;
+// if (planHallCalendar === true && heatingPeriod === true) {
+//   heatingHallAllowed = true;
+// } else {
+//   heatingHallAllowed = false;
+// }
 
 // thermostat current status
-if ((currentTemperature <= heatingStartTemperature) && heatingHallAllowed === true) {
+if ((currentTemperature <= heatingStartTemperature) && heatingPeriod === true) {
   thermostat = true;
 } else if (currentTemperature >= heatingStopTemperature) {
   thermostat = false;
