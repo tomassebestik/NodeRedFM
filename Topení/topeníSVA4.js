@@ -1,53 +1,44 @@
 // setup HEATING COIL IN AIR-UNIT
-const heatingLimitsHall = "limityTopeniSvarovna";
-const quidoBoard = "quidoVYSTUPYSvarovna";
+const heatingLimitsHall = 'limityTopeniSvarovna';
+const quidoBoard = 'quidoVYSTUPYSvarovna';
 
 const ipAddressQuidoEnd = 231;
 const quidoDrivenOutput = 5;
 const quidoOutputTime = 255;
 
-var sensorPrimaryStatus = global.get("senzoryPripravna.stavS6");
-var sensorPrimaryTemperature = global.get("senzoryPripravna.teplota6");
-var sensorBackupTemperature = global.get("senzorySvarovna.teplota5");
-var manualControl = global.get("heatManualSvarovna");
+var sensorPrimaryStatus = global.get('sensoryPripravna.stavS6');
+var sensorPrimaryTemperature = global.get('sensoryPripravna.teplota6');
+var sensorBackupTemperature = global.get('sensorySvarovna.teplota5');
+var manualControl = global.get('heatManualSvarovna');
 
-var UIswitch = global.get("svarControl_topeni4");
-var mainBranchSwitch = global.get("svarControl_privod4");
+var UIswitch = global.get('svarControl_topeni4');
+var mainBranchSwitch = global.get('svarControl_privod4');
 
 ///////////////////////////////////
 ///// CODE:
 var heatingStartTemperature = global.get(`${heatingLimitsHall}.START`);
 var heatingStopTemperature = global.get(`${heatingLimitsHall}.STOP`);
-var planHallCalendar = global.get(`${heatingLimitsHall}.STAV`);
 var heatingPeriod = global.get(`topnaSezona`);
 var outputRelay = global.get(`${quidoBoard}.Quido_O${quidoDrivenOutput}`);
 var currentTemperature;
 var thermostat;
+var antiFreeze;
 
 // driving sensor priority / status 0,1,2,3 = OK; 4 = sensor error
 if (sensorPrimaryStatus !== 4) {
-  currentTemperature = sensorPrimaryTemperature;
+    currentTemperature = sensorPrimaryTemperature;
 } else {
-  currentTemperature = sensorBackupTemperature;
-}
-
-// active heating allowed logic
-var heatingHallAllowed;
-if (planHallCalendar === true && heatingPeriod === true) {
-  heatingHallAllowed = true;
-} else {
-  heatingHallAllowed = false;
+    currentTemperature = sensorBackupTemperature;
 }
 
 // thermostat current status
-if (
-  currentTemperature <= heatingStartTemperature &&
-  heatingHallAllowed === true
-) {
-  thermostat = true;
+if (currentTemperature <= heatingStartTemperature && heatingPeriod === true) {
+    thermostat = true;
+    antiFreeze = true;
 } else if (currentTemperature >= heatingStopTemperature) {
-  thermostat = false;
-} else thermostat = "mezi";
+    thermostat = false;
+    antiFreeze = false;
+} else thermostat = 'mezi';
 
 // driving API commands constructor
 var commandOnPulse = `http://10.3.2.${ipAddressQuidoEnd}/set.xml?type=s&id=${quidoDrivenOutput}&time=${quidoOutputTime}`;
@@ -58,72 +49,74 @@ var command;
 var drive;
 
 if (mainBranchSwitch === false) {
-  command = commandOff;
-  drive = false;
+    command = commandOff;
+    drive = false;
 } else if (manualControl === true && UIswitch === false) {
-  command = commandOff;
-  drive = false;
+    command = commandOff;
+    drive = false;
 } else if (manualControl === true && UIswitch === true) {
-  command = commandOnPulse;
-  drive = true;
+    command = commandOnPulse;
+    drive = true;
 } else if (
-  manualControl === false &&
-  UIswitch === false &&
-  thermostat === false
+    manualControl === false &&
+    UIswitch === false &&
+    thermostat === false
 ) {
-  command = commandOff;
-  drive = false;
+    command = commandOff;
+    drive = false;
 } else if (
-  manualControl === false &&
-  UIswitch === true &&
-  thermostat === false
+    manualControl === false &&
+    UIswitch === true &&
+    thermostat === false
 ) {
-  command = commandOff;
-  drive = false;
+    command = commandOff;
+    drive = false;
 } else if (
-  manualControl === false &&
-  UIswitch === false &&
-  thermostat === true
+    manualControl === false &&
+    UIswitch === false &&
+    thermostat === true
 ) {
-  command = commandOnPulse;
-  drive = true;
+    command = commandOnPulse;
+    drive = true;
 } else if (
-  manualControl === false &&
-  UIswitch === true &&
-  thermostat === true
+    manualControl === false &&
+    UIswitch === true &&
+    thermostat === true
 ) {
-  command = commandOnPulse;
-  drive = true;
+    command = commandOnPulse;
+    drive = true;
 
-  //manual
+    //manual
 } else if (
-  manualControl === false &&
-  thermostat === "mezi" &&
-  outputRelay === 0
+    manualControl === false &&
+    thermostat === 'mezi' &&
+    outputRelay === 0
 ) {
-  // no command, only switch
-  command = null;
-  drive = false;
+    // no command, only switch
+    command = null;
+    drive = false;
 } else if (
-  manualControl === false &&
-  thermostat === "mezi" &&
-  outputRelay === 1
+    manualControl === false &&
+    thermostat === 'mezi' &&
+    outputRelay === 1
 ) {
-  command = null;
-  drive = true;
+    command = null;
+    drive = true;
 } else command = null;
 
 // output
 var msg1 = {
-  payload: command,
-  url: command,
-  drive: drive
+    payload : command,
+    url     : command,
+    drive   : drive
 };
 
 var msg2 = {
-  payload: currentTemperature,
-  thermostat: thermostat,
-  control: manualControl
+    payload    : currentTemperature,
+    thermostat : thermostat,
+    control    : manualControl,
+    antiFreeze : antiFreeze
 };
 
-return [msg1, msg2];
+global.set('antiFreezeSVA4', antiFreeze);
+return [ msg1, msg2 ];
